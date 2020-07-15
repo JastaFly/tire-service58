@@ -1,0 +1,54 @@
+
+.btn {
+    appearance: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(20px);
+    line-height:  rem(15px);
+    transition: background .25s ease-in, color .25s ease-in, border .25s ease-in ;
+    position: relative;
+
+    &-default{
+        background: #ED2823;
+        box-shadow: 0px 4px 12px rgba(237, 40, 35, 0.25);
+        border-radius: rem(10px);
+        color: $white;
+        height: rem(30px);
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        padding: 0 rem(15px);
+        text-transform: uppercase;
+
+        @media all and (max-width: $medium){
+            font-size: 15px;
+            line-height: 18px;
+
+        }
+
+        &:hover, &:focus{
+            background: #d22621;
+        }
+    }
+
+    &-primary{
+        background: #FFFFFF;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #403F41;
+        min-width: 171px;
+        height: 30px;
+    }
+}

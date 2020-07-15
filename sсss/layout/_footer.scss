@@ -1,0 +1,180 @@
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+
+    @media all and (max-width: $medium){
+        flex-direction: column;
+    }
+
+    &-box{
+
+        &__item{
+            width: 50%;
+
+            @media all and (max-width: $medium){
+                width: 100%;
+            }
+
+            &:nth-child(1){
+                background: url('../images/18.png') 0 calc(100% + 85px)/ contain #ED2823 no-repeat;
+
+                padding-left: calc((100vw - 1140px) / 2);
+
+                @media all and (min-width: 720px) and (max-width: 1024px){
+                    padding-left: 15px;
+                    background-size: 200%;
+                    background-position: 0 bottom;
+                }
+
+                @media all and (max-width: $medium){
+                    padding-left: 32px;
+                    padding-right: 32px;
+                }
+            }
+
+            .main-title, .main-subtitle{
+                color: #FFFFFF;
+            }
+
+            .main-title{
+                margin-top: 58px;
+            }
+
+            .main-subtitle{
+                margin-bottom: 35px;
+
+            }
+
+            .garage-box__list{
+
+                .garage-box__item{
+                    max-width: 267px;
+                    background: transparent;
+                    border: 2px solid #FFFFFF;
+
+                        path{
+                            fill: #fff;
+                        }
+
+                        .garage-box__item-title,.garage-box__item-text{
+                            color: #fff;
+                        }
+
+                    &.active{
+                        background: #FFFFFF;
+
+                        path{
+                            fill: #ED2823;
+                        }
+
+                        .garage-box__item-title,.garage-box__item-text{
+                            color: #000000;
+                        }
+                    }
+
+                    &:hover{
+                        background: #FFFFFF;
+
+                        path{
+                            fill: #ED2823;
+                        }
+
+                        .garage-box__item-title,.garage-box__item-text{
+                            color: #000000;
+                        }
+
+                    }
+                }
+            }
+
+
+
+        }
+
+
+    }
+
+    &-form{
+
+        h3{
+            font-size: 24px;
+            line-height: 33px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-top: 58px;
+
+            @media all and (min-width: 720px) and (max-width: 1024px){
+                width: 80%;
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+        }
+
+        p:not(.help){
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 25px;
+            color: #FFFFFF;
+            margin-bottom: 25px;
+            width: 90%;
+
+            @media all and (min-width: 720px) and (max-width: 1024px){
+                width: 80%;
+            }
+
+            @media all and (max-width: $medium){
+                width: 100%
+            }
+
+
+        }
+
+        &__box{
+            display: flex;
+
+
+            @media all and (max-width: $large){
+                flex-direction: column;
+            }
+        }
+
+        &__row{
+            margin-right: 30px;
+
+            @media all and (max-width: $medium){
+                margin-right: 0;
+            }
+
+
+            .form-control{
+                @media all and (max-width: $large){
+                    margin-bottom: 14px;
+                    width: 203px;
+
+                }
+            }
+
+            .btn{
+                @media all and (max-width: $large){
+                    max-width: 203px;
+                    height: 44px;
+                    min-width: 203px;
+                }
+            }
+            .help{
+                margin-top: 18px;
+                width: 100%;
+                max-width: 172px;
+
+                @media all and (max-width: $large){
+                    margin-bottom: 20px;
+
+                }
+            }
+        }
+    }
+
+
+
+}

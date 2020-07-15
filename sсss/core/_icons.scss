@@ -1,0 +1,52 @@
+
+%icon{
+	display: inline-block;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+// %icon-size-124{
+// 	width: rem(124px);
+// 	height:  rem(131px);
+// }
+
+@each $type in map {
+  .ico-#{$type} {
+
+	@extend %icon;
+	
+	@if $type == map{
+		width: 8.60px;
+		height: 13.6px;
+	}
+	// } @else if $type == fc {
+	// 	@extend %icon-size-23;
+	// } @else if $type == arrow_left {
+	// 	width: rem(10px);
+	// 	height: rem(10px);
+	// } @else if $type == edit {
+	// 	width: rem(12px);
+	// 	height: rem(13px);
+	// } @else if $type == arrow_r {
+	// 	width: rem(30px);
+	// 	height: rem(50px);
+	// } @else if $type == aim {
+	// 	width: rem(50px);
+	// 	height: rem(50px);
+	// } @else if $type == exit or $type == info {
+	// 	width: rem(25px);
+	// 	height: rem(25px);
+	// } @else if $type == heart or $type == binocular or $type == mail or $type == aim_bl{
+	// 	width: rem(29px);
+	// 	height: rem(29px);
+	// } @else if $type == clock or $type == gps{
+	// 	width: rem(20px);
+	// 	height: rem(20px);
+	// }
+    background-image: url('../images/#{$type}.svg');
+
+  }
+}
